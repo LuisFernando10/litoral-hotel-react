@@ -1,3 +1,11 @@
+@import "../../../assets/css/colors.scss";
+
 .header-container {
-  background-color: aqua;
+  background-color: $color-orange-light;
+  width: 100%;
+
+  .nav-container ul {
+    display: flex;
+    justify-content: center;
+  }
 }

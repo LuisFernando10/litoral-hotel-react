@@ -6,7 +6,7 @@ import "./styles.scss";
 const Header = () => {
   return (
     <header className="header-container">
-      <nav>
+      <nav className="nav-container">
         <ul>
           <li>
             <Link to={pages.home}>Inicio</Link>
