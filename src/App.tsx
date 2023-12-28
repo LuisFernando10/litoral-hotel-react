@@ -1,12 +1,17 @@
-import React from "react";
+import React, { Suspense } from "react";
+import { Routes, Route } from "react-router-dom";
+import { pages } from "./constants";
+import Home from "./pages/Home";
 import "./App.scss";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <section className="app-section"></section>
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <Routes>
+        <Route path={pages.home} element={<Home />} />
+      </Routes>
+    </Suspense>
   );
-}
+};
 
 export default App;
