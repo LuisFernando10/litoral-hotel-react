@@ -1,9 +1,11 @@
 import { Link } from "react-router-dom";
 import { pages } from "../../../constants";
 
+import "./styles.scss";
+
 const Header = () => {
   return (
-    <header>
+    <header className="header-container">
       <nav>
         <ul>
           <li>
