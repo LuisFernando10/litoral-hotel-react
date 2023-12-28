@@ -1,14 +1,15 @@
 import React, { Suspense } from "react";
-import { Routes, Route } from "react-router-dom";
-import { pages } from "./constants";
-import Home from "./pages/Home";
+import { Route, Routes } from "react-router-dom";
+import { routes } from "./config";
 import "./App.scss";
 
 const App: React.FC = () => {
   return (
     <Suspense fallback={<div>Loading...</div>}>
       <Routes>
-        <Route path={pages.home} element={<Home />} />
+        {routes.map((route, idx) => (
+          <Route path={route.path} Component={route.component} key={idx} />
+        ))}
       </Routes>
     </Suspense>
   );
