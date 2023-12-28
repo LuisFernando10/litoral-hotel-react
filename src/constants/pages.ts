@@ -3,5 +3,6 @@ export const pages = {
   contact: "/contact",
   home: "/home",
   notFound: "*",
+  rooms: "/rooms",
   root: "/",
 };
