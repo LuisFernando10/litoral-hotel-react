@@ -5,13 +5,15 @@ import "./App.scss";
 
 const App: React.FC = () => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <Routes>
-        {routes.map((route, idx) => (
-          <Route path={route.path} Component={route.component} key={idx} />
-        ))}
-      </Routes>
-    </Suspense>
+    <div className="App">
+      <Suspense fallback={<div>Loading...</div>}>
+        <Routes>
+          {routes.map((route, idx) => (
+            <Route path={route.path} Component={route.component} key={idx} />
+          ))}
+        </Routes>
+      </Suspense>
+    </div>
   );
 };
 
